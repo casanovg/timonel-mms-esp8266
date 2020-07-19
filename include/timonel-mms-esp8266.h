@@ -11,8 +11,8 @@
   ............................................................................
 */
 
-#ifndef TIMONEL_TWIM_MS_H
-#define TIMONEL_TWIM_MS_H
+#ifndef TIMONEL_MMS_ESP8266_H
+#define TIMONEL_MMS_ESP8266_H
 
 #include <NbMicro.h>
 #include <TimonelTwiM.h>
@@ -46,4 +46,4 @@ void ShowHeader(void);
 void PrintLogo(void);
 void ClrScr(void);
 
-#endif  // TIMONEL_TWIM_MS_H
+#endif  // TIMONEL_MMS_ESP8266_H
