@@ -1,7 +1,7 @@
 /*
   Timonel bootloader I2C-master multi slave application demo for ESP8266
   ............................................................................
-  File: timonel-mms-esp8266.cpp (Application)
+  File: timonel-mms-esp8266.ino (Arduino sketch)
   ............................................................................
   This demo shows how to control and update several Tiny85 microcontrollers
   running the Timonel bootloader from an ESP8266 master.
@@ -23,13 +23,29 @@
    7) Repeats the routine 3 times.
 */
 
-#include "timonel-mms-esp8266.h"
-
 #include <NbMicro.h>
 #include <TimonelTwiM.h>
 #include <TwiBus.h>
 
 #include "payload.h"
+
+// This software
+#define VER_MAJOR 1
+#define VER_MINOR 5
+#define VER_PATCH 0
+
+// Serial display settings
+#define USE_SERIAL Serial
+#define SERIAL_BPS 115200
+
+// I2C pins
+#define SDA 2  // I2C SDA pin - ESP8266 2 - ESP32 21
+#define SCL 0  // I2C SCL pin - ESP8266 0 - ESP32 22
+
+// Routine settings
+#define MAX_TWI_DEVS 28
+#define LOOP_COUNT 3
+#define T_SIGNATURE 84
 
 /* ___________________
   |                   | 
